@@ -13,7 +13,7 @@ Crée une machine virtuelle avec Ubuntu Server.
 
 2. Serveur Web (Apache + PHP)
 Ouvre un terminal dans Ubuntu et exécute :
-sudo apt update  sudo apt install apache2 php libapache2-mod-php
+sudo apt update,  sudo apt install apache2 php libapache2-mod-php
 
 3. Site Web
 Place ce fichier dans /var/www/html/index.php :
