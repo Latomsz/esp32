@@ -3,11 +3,11 @@
 #include <WebServer.h>
 
 // ===== WIFI =====
-const char* ssid = "TPSN035";
-const char* password = "BTSSN2022";
+const char* ssid = "*********";
+const char* password = "*********";
 
 // serveur PHP (envoi valeur)
-const char* serverName = "http://192.168.100.37/btsciel/index.php";
+const char* serverName = "http://adresse_ip/btsciel/index.php";
 
 // ===== SERVEUR WEB LOCAL =====
 WebServer server(80);
@@ -16,13 +16,11 @@ WebServer server(80);
 int ledPin = 23;
 int buzzerPin = 26;
 
-// ===== TEMPS ENVOI =====
+
 unsigned long lastSend = 0;
 const unsigned long interval = 5000; // 5s
 
-// =====================
-// BOUTON LED
-// =====================
+
 void handleLED() {
   digitalWrite(ledPin, HIGH);
   delay(300);
@@ -76,9 +74,6 @@ void sendRandomValue() {
   }
 }
 
-// =====================
-// SETUP
-// =====================
 void setup() {
   Serial.begin(115200);
 
@@ -106,10 +101,6 @@ void setup() {
 
   server.begin();
 }
-
-// =====================
-// LOOP
-// =====================
 void loop() {
   server.handleClient();
 
