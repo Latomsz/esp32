@@ -42,7 +42,7 @@ if (file_exists($file)) {
     <h1>Dernière valeur reçue de l'Arduino</h1>
     <div class="valeur"><?php echo $valeur; ?></div>
     <p>La page se rafraîchit automatiquement toutes les 5 secondes.</p>
-    <button onclick="fetch('http://192.168.100.58/led')">
+    <button onclick="fetch('http://adresse_ip/led')">
     Allumer Led
     </button>
 
