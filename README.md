@@ -6,15 +6,27 @@ ESP32
 1 LED 
 1 buzzer 
 
-2: machine virtuelle Ubuntu ?
-Un site web a besoin d’un serveur pour fonctionner. Au lieu d’utiliser un serveur physique, vous pouvez créer une machine virtuelle.
-C'est simplement un ordinateur installé à l’intérieur de votre ordinateur.
-Les avantages sont nombreux :
-* aucun risque pour votre PC principal,
-* facile à recommencer en cas d’erreur,
-* très utilisé dans le monde professionnel.
-Installation d’Ubuntu
-Pour installer Ubuntu, vous aurez besoin d’un logiciel tel que :
-* VirtualBox
-* VMware
-La machine virtuelle Ubuntu servira de serveur web local.
+1. Machine virtuelle Ubuntu
+Installe VirtualBox ou VMware.
+
+Crée une machine virtuelle avec Ubuntu Server.
+
+2. Serveur Web (Apache + PHP)
+Ouvre un terminal dans Ubuntu et exécute :
+sudo apt update
+sudo apt install apache2 php libapache2-mod-php
+
+3. Site Web
+Place ce fichier dans /var/www/html/index.php :
+Remplace [IP_ESP32] par l'adresse IP de ton ESP32.
+
+Code ESP32
+Télécharge ce code sur ton ESP32 :
+ESP32.ino
+
+Utilisation
+1. Accède au site web via l'IP de ta machine virtuelle Ubuntu.
+
+2. Clique sur "Allumer LED" ou "Allumer Buzzer" pour contrôler l'ESP32.
+
+
